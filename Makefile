@@ -1,6 +1,10 @@
 NAME = pushswap
 
-SRCS =	swap.c
+SRCS =	main.c \
+		swap.c \
+		checks.c \
+		push.c \
+		content_functions.c
 
 SRCS_PREFIX = $(addprefix srcs/, $(SRCS))
 
@@ -20,11 +24,10 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	@make bonus -C libft
-	gcc $(FLAGS) main.c $(INCLUDES) $(TAIL) -o $(NAME)
+	gcc $(FLAGS) $(OBJ) $(INCLUDES) $(TAIL) -o $(NAME)
 
 %.o: %.c
 	gcc $(FLAGS) $(INCLUDES) -g -c $< -o $@
-	
 
 clean:
 		@make clean -C libft
