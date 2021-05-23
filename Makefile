@@ -4,7 +4,10 @@ SRCS =	main.c \
 		swap.c \
 		checks.c \
 		push.c \
-		content_functions.c
+		rotate.c \
+		reverse_rotate.c \
+		content_functions.c \
+		tests.c
 
 SRCS_PREFIX = $(addprefix srcs/, $(SRCS))
 
@@ -24,10 +27,10 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	@make bonus -C libft
-	gcc $(FLAGS) $(OBJ) $(INCLUDES) $(TAIL) -o $(NAME)
+	CC $(FLAGS) $(OBJ) $(INCLUDES) $(TAIL) -o $(NAME)
 
 %.o: %.c
-	gcc $(FLAGS) $(INCLUDES) -g -c $< -o $@
+	CC $(FLAGS) $(INCLUDES) -g -c $< -o $@
 
 clean:
 		@make clean -C libft
@@ -35,7 +38,7 @@ clean:
 
 fclean: clean
 		@make fclean -C libft
-		rm -f $(NAME).a
+		rm -f $(NAME)
 
 re: fclean all
 

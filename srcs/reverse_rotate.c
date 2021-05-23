@@ -1,21 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   push.c                                             :+:    :+:            */
+/*   reverse_rotate.c                                   :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: ztan <ztan@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2021/05/20 20:15:15 by ztan          #+#    #+#                 */
-/*   Updated: 2021/05/23 16:43:55 by ztan          ########   odam.nl         */
+/*   Created: 2021/05/23 16:25:59 by ztan          #+#    #+#                 */
+/*   Updated: 2021/05/23 16:29:32 by ztan          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pushswap.h"
 
-void	push(t_dlist **from, t_dlist **dest)
+void	reverse_rotate(t_dlist **lst)
 {
-	if (!from || !*from)
+	t_dlist *node;
+
+	if (!lst || !*lst)
 		return ;
-	ft_dlstadd_front(dest, ft_dlstnew(dup_cont((*from)->content)));
-	ft_dlstdelone(from, 1, del_content);
+	node = ft_dlstlast((*lst));
+	ft_dlstadd_front(lst, ft_dlstnew(dup_cont(node->content)));
+	ft_dlstdelone(lst, ft_dlstsize(*lst), del_content);
 }

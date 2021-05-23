@@ -6,7 +6,7 @@
 /*   By: ztan <ztan@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/05/19 17:10:58 by ztan          #+#    #+#                 */
-/*   Updated: 2021/05/20 20:42:52 by ztan          ########   odam.nl         */
+/*   Updated: 2021/05/23 16:38:48 by ztan          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,9 +61,9 @@ int	main(int argc, char **argv)
 	}
 	array_a = get_list(argv, argc);
 	print_arrays(array_a, array_b);
-	swap(&array_a);
-	print_arrays(array_a, array_b);
-	push(&array_b, &array_a);
-	print_arrays(array_a, array_b);
+	swap_tests(&array_a, &array_b);
+	push_tests(&array_a, &array_b);
+	rotate_tests(&array_a, &array_b);
+	reverse_rotate_tests(&array_a, &array_b);
 	return (0);
 }
