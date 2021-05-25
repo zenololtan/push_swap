@@ -6,7 +6,7 @@
 /*   By: ztan <ztan@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/05/23 16:35:35 by ztan          #+#    #+#                 */
-/*   Updated: 2021/05/23 16:57:45 by ztan          ########   odam.nl         */
+/*   Updated: 2021/05/24 10:09:06 by ztan          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,5 +109,4 @@ void	reverse_rotate_tests(t_dlist **a, t_dlist **b)
 	test = NULL;
 	reverse_rotate(&test);
 	print_arrays(test, *b);
-
 }

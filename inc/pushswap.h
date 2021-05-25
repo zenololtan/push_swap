@@ -6,7 +6,7 @@
 /*   By: ztan <ztan@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/05/19 17:11:01 by ztan          #+#    #+#                 */
-/*   Updated: 2021/05/23 16:44:06 by ztan          ########   odam.nl         */
+/*   Updated: 2021/05/24 10:51:29 by ztan          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,13 @@ int			check_max_or_min(char **args, int argc);
 
 //move funcs
 void		swap(t_dlist **lst);
+void		ss(t_dlist **a, t_dlist **b);
 void		push(t_dlist **array_a, t_dlist **array_b);
 void		push(t_dlist **from, t_dlist **dest);
 void		rotate(t_dlist **lst);
+void		rr(t_dlist **a, t_dlist **b);
 void		reverse_rotate(t_dlist **lst);
+void		rrr(t_dlist **a, t_dlist **b);
 
 //tests
 void	swap_tests(t_dlist **a, t_dlist **b);
